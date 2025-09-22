@@ -13,7 +13,7 @@ struct AlertReminders: View {
             Color(red: 251.0/255.0, green: 248.0/255.0, blue: 231.0/255.0)
                 .ignoresSafeArea()
             RoundedRectangle(cornerRadius: 10.0)
-                        .fill(Color.blue)
+                        .fill(Color.brown)
                         .frame(width: 405.0, height: 170.0)
                         .ignoresSafeArea()
                         .position(x: 201, y:70)
