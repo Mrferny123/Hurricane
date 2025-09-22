@@ -11,7 +11,7 @@ struct Chatbot: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.blue
+                Color(red: 251.0/255.0, green: 248.0/255.0, blue: 231.0/255.0)
                     .ignoresSafeArea()
                 VStack {
                     Text("Welcome to the Hurricane Helper Chatbot")

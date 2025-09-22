@@ -10,13 +10,18 @@ import SwiftUI
 struct AlertReminders: View {
     var body: some View {
         ZStack {
-            Color.blue
+            Color(red: 251.0/255.0, green: 248.0/255.0, blue: 231.0/255.0)
                 .ignoresSafeArea()
+            RoundedRectangle(cornerRadius: 10.0)
+                        .fill(Color.blue)
+                        .frame(width: 405.0, height: 170.0)
+                        .ignoresSafeArea()
+                        .position(x: 201, y:70)
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+                Text("Here are the most recent alerts for your area:")
+                    .bold()
+                    .padding()
+                Spacer()
             }
             .padding()
         }

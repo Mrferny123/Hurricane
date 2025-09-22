@@ -10,19 +10,16 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.blue
+            Color(red: 251.0/255.0, green: 248.0/255.0, blue: 231.0/255.0)
                 .ignoresSafeArea()
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
                 Text("Welcome to Hurricane Helper!")
                 NavigationLink(destination: Chatbot()) {
                     Text("Hurricane AI Chatbot")
                 }
-                .foregroundColor(.white)
-                .buttonStyle(.borderedProminent)
-                .tint(Color(red: 149.0/255.0, green: 114.0/255.0, blue: 76.0/255.0))
+                    .foregroundColor(.white)
+                    .buttonStyle(.borderedProminent)
+                    .tint(Color(red: 255.0/255.0, green: 114.0/255.0, blue: 76.0/255.0))
                 NavigationLink(destination: Chatbot()) {
                     Text("See All Alerts")
                 }
