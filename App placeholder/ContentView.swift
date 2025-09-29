@@ -27,7 +27,7 @@ struct ContentView: View {
                             .foregroundStyle(Color.white)
                     }
                 }
-                NavigationLink(destination: Chatbot()) {
+                NavigationLink(destination: AlertReminders()) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10.0)
                             .fill(Color(red: 133.0/255, green: 161.0/255.0, blue: 170.0/255.0))
