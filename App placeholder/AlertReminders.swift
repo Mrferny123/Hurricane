@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AlertReminders: View {
+    @StateObject var viewModel = AlertsViewModel()
+    
     var body: some View {
         ZStack {
             Color(red: 240.0/255.0, green: 235.0/255.0, blue: 223.0/255.0)
@@ -23,14 +25,34 @@ struct AlertReminders: View {
                     .font(.system(size: 20.0))
                     .foregroundStyle(Color(red: 95.0/255.0, green: 123.0/255.0, blue: 140.0/255.0))
                     .padding()
-                //need to get user locations permissions
-                //user location as variable
-                //api from weather.gov and integrate it
-                
+            
                 //maybe make map page if time
+                //Maybe make app more personalized based on user location?
                 Spacer()
+                
+                if viewModel.alerts.isEmpty {
+                    Text("No active alerts")
+                        .font(.system(size: 24))
+                        .fontWeight(.bold)
+                    Spacer()
+                    
+                } else {
+                    List(viewModel.alerts) { alert in
+                    VStack(alignment: .leading) {
+                        Text(alert.properties.headline)
+                            .bold()
+                            .foregroundStyle(.black)
+                        Text(alert.properties.description)
+                            .font(.caption)
+                        }
+                    .padding(.vertical, 4)
+                    }
+                }
             }
             .padding()
+            .onAppear {
+                viewModel.loadAlerts()
+            }
         }
     }
 }
