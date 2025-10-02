@@ -31,10 +31,19 @@ struct ContentView: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10.0)
                             .fill(Color(red: 133.0/255, green: 161.0/255.0, blue: 170.0/255.0))
-                            .frame(width: 160.0, height: 30.0)
+                            .frame(width: 120.0, height: 30.0)
                         Text("See All Alerts")
                             .foregroundStyle(Color.white)
                         
+                    }
+                }
+                NavigationLink(destination: ToDoList()) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .fill(Color(red: 133.0/255.0, green: 161.0/255.0, blue: 170.0/255.0))
+                            .frame(width: 220.0, height: 30.0)
+                        Text("Do before hurricane starts")
+                            .foregroundStyle(Color.white)
                     }
                 }
                 //Work on UI, seems empty on the home page
@@ -43,6 +52,9 @@ struct ContentView: View {
                 //or even athena awards other peoples, though not a
                 //lot writing with swift
                 //UI could take from the project made in TSG
+                
+                //maybe instead of button it becomes a thing at the bottom? -> will have to make it less plain then bc buttons will be lower
+                
                 
 //                .toolbarBackground(.blue, for: .navigationBar)
 //                .toolbarBackground(.visible, for: .navigationBar)
