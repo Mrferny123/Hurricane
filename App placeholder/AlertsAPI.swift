@@ -17,8 +17,8 @@ struct WeatherAlertResponse: Codable {
     }
     
     struct Properties: Codable {
-        let headline: String
-        let description: String
+        let headline: String?
+        let description: String?
     }
 }
 

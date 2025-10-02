@@ -39,10 +39,10 @@ struct AlertReminders: View {
                 } else {
                     List(viewModel.alerts) { alert in
                     VStack(alignment: .leading) {
-                        Text(alert.properties.headline)
+                        Text(alert.properties.headline ?? "Alert")
                             .bold()
                             .foregroundStyle(.black)
-                        Text(alert.properties.description)
+                        Text(alert.properties.description ?? "")
                             .font(.caption)
                         }
                     .padding(.vertical, 4)

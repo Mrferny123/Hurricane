@@ -8,7 +8,23 @@
 
 import SwiftUI
 
+struct CheckListItems: Identifiable {
+    let id = UUID()
+    let title: String
+    var isChecked: Bool
+}
+
+//Add more maybe??
 struct ToDoList: View {
+    @State private var checkListItems: [CheckListItems] = [
+        CheckListItems(title: "Get one gallon of water per person per day you stay inside your home", isChecked: false),
+        CheckListItems(title: "Get a 3 day to 2 week supply of easy to prepare, protein rich food.", isChecked: false),
+        CheckListItems(title: "Know your evacuation route", isChecked: false),
+        CheckListItems(title: "Take pictures of your house or property before the hurricane hits for insurance", isChecked: false),
+        CheckListItems(title: "Try to close off windows and put sandbags around your house to help with flooding", isChecked: false),
+        CheckListItems(title: "Try to have access of live news through phones or radios", isChecked: false),
+        CheckListItems(title: "Store important documents in a large water sealed container", isChecked: false)
+    ]
     var body: some View {
         ZStack {
             Color(red: 240.0/255.0, green: 235.0/255.0, blue: 223.0/255.0)
@@ -19,12 +35,28 @@ struct ToDoList: View {
                 .ignoresSafeArea()
                 .position(x: 201, y:70)
             VStack {
-                Text("Here are the most recent alerts for your area: ")
+                //Maybe include mental health page to calm down during hurricane
+                Text("Here are some things you should do to prepare for a hurricane: ")
                     .bold()
                     .font(.system(size: 20.0))
                     .foregroundStyle(Color(red: 95.0/255.0, green: 123.0/255.0, blue: 140.0/255.0))
                     .padding()
                         Spacer()
+                Spacer()
+                List {
+                    ForEach($checkListItems) { $item in
+                        HStack {
+                            Image(systemName: item.isChecked ? "checkmark.square": "square")
+                                .onTapGesture {
+                                    item.isChecked.toggle()
+                                }
+                            Text(item.title)
+
+                        }
+                    }
+                }
+                .scrollContentBackground(.hidden)
+                
             }
             .padding()
         }
