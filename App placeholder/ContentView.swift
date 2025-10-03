@@ -46,6 +46,15 @@ struct ContentView: View {
                             .foregroundStyle(Color.white)
                     }
                 }
+                NavigationLink(destination: Evacuation()) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10.0)
+                            .fill(Color(red: 133.0/255.0, green: 161.0/255.0, blue: 170.0/255.0))
+                            .frame(width: 180.0, height: 30.0)
+                        Text("See current shelters")
+                            .foregroundStyle(Color.white)
+                    }
+                }
                 //Work on UI, seems empty on the home page
                 //similar to last year
                 //find asethtic way to make home pages -> prob pinterest
