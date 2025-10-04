@@ -18,6 +18,7 @@ struct Shelter: Identifiable {
     let address: String
     let coordinate: CLLocationCoordinate2D
     let info: String
+    var clicked: Bool
 }
 
 struct Evacuation: View {
@@ -25,36 +26,70 @@ struct Evacuation: View {
     //do more reseach on the different shelters, however, many only come when a hurricane is actually present, so maybe just put last years?
     //add maybe a card that user can click on to get more details
     
-    let shelters: [Shelter] = [
+    @State private var shelters: [Shelter] = [
         Shelter(
             name: "Fasano Regional Hurricane Shelter",
             address: "11611 Denton Ave, Hudson, FL 34667",
             coordinate: CLLocationCoordinate2D(latitude: 27.6648, longitude: -81.5158),
-            info: "Shelter in Pasco County, Florida"
+            info: "Shelter in Pasco County, Florida",
+            clicked: false
         )
     ]
     
-    let florida = CLLocationCoordinate2D(
-        latitude: 27.6648,
-        longitude: -81.5158
-    )
-    let fasano = CLLocationCoordinate2D(
-        latitude: 28.3904554,
-        longitude: -82.6245256
-    )
-    let stormShelter = CLLocationCoordinate2D(
-        latitude: 28.472288131713867,
-        longitude: -81.59027862548828
-    )
+    @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion (
+        center:CLLocationCoordinate2D(latitude: 27.6648,longitude: -81.5158),
+        span: MKCoordinateSpan(latitudeDelta: 4.0, longitudeDelta: 4.0)
+    ))
+    
+    @State private var selectedShelter: Shelter? = nil
+//    let fasano = CLLocationCoordinate2D(
+//        latitude: 28.3904554,
+//        longitude: -82.6245256
+//    )
+//    let stormShelter = CLLocationCoordinate2D(
+//        latitude: 28.472288131713867,
+//        longitude: -81.59027862548828
+//    )
+    
     
     var body: some View {
-        Map() {
-            Marker("Florida", coordinate: florida)
-                .tint(.blue)
-            Marker("Husdon Shelter", coordinate: fasano)
-                .tint(.blue)
-            Marker("Storm Shelter", coordinate: stormShelter)
+        
+//        ForEach($shelters) { $shelter in
+//            Marker(shelter.name, coordinate: shelter.coordinate)
+//                .onTapGesture {
+//                    shelter.clicked.toggle()
+//                }
+//        }
+        ZStack {
+            Map(position: $cameraPosition) {
+                ForEach(shelters) { shelter in
+                    Annotation(shelter.name, coordinate: shelter.coordinate) {
+                        ZStack {
+                            Circle()
+                                .fill(Color.blue.opacity(0.3))
+                                .frame(width: 30, height: 30)
+
+                            Image(systemName: "mappin.circle.fill")
+                                .font(.title)
+                                .foregroundStyle(Color.red)
+                        }
+                        .onTapGesture {
+                            if selectedShelter?.id == shelter.id {
+                                selectedShelter = nil
+                            } else {
+                                selectedShelter = shelter
+                            }
+                        }
+                    }
+                }
+            }
         }
+
+//            Marker("Florida", coordinate: florida)
+//                .tint(.blue)
+//            Marker("Husdon Shelter", coordinate: fasano)
+//                .tint(.blue)
+//            Marker("Storm Shelter", coordinate: stormShelter)
         .safeAreaInset(edge: .bottom) {
             NavigationLink(destination: ContentView()) {
                 ZStack {
@@ -78,9 +113,9 @@ struct Evacuation: View {
 //similar to the todo list page, but idk where to put it- maybe make a VStack before??
 
 //List {
-//    ForEach(shelters) { $shelter in
+//    ForEach($shelters) { $shelter in
 //        HStack {
-//            Image(systemName: shelter.isChecked ? "checkmark.square": "square")
+//            Text(systemName: shelter.isChecked ? "shelter.address": " ")
 //                .onTapGesture {
 //                    shelter.isChecked.toggle()
 //                }
@@ -90,3 +125,4 @@ struct Evacuation: View {
 //    }
 //}
 //.scrollContentBackground(.hidden)
+
