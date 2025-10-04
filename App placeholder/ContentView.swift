@@ -42,7 +42,7 @@ struct ContentView: View {
                         RoundedRectangle(cornerRadius: 10.0)
                             .fill(Color(red: 133.0/255.0, green: 161.0/255.0, blue: 170.0/255.0))
                             .frame(width: 220.0, height: 30.0)
-                        Text("Do before hurricane starts")
+                        Text("Tips Before The Hurricane")
                             .foregroundStyle(Color.white)
                     }
                 }

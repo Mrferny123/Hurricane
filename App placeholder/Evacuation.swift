@@ -18,7 +18,6 @@ struct Shelter: Identifiable {
     let address: String
     let coordinate: CLLocationCoordinate2D
     let info: String
-    var clicked: Bool
 }
 
 struct Evacuation: View {
@@ -32,7 +31,18 @@ struct Evacuation: View {
             address: "11611 Denton Ave, Hudson, FL 34667",
             coordinate: CLLocationCoordinate2D(latitude: 27.6648, longitude: -81.5158),
             info: "Shelter in Pasco County, Florida",
-            clicked: false
+        ),
+        Shelter(
+            name: "West Orange Recreation Center",
+            address: "309 SW Crown Point Rd, Winter Garden, FL 34787",
+            coordinate: CLLocationCoordinate2D(latitude: 28.568108, longitude:-81.566660),
+            info: "Shelter in Orange County; Pet friendly"
+        ),
+        Shelter(
+            name: "Palm Harbor University High",
+            address: "1900 Omaha StPalm Harbor, FL 34683",
+            coordinate: CLLocationCoordinate2D(latitude: 28.083701, longitude:-82.760102),
+            info: "Shelter in Pinellas County; Pet friendly, Special needs friendly"
         )
     ]
     
@@ -41,25 +51,8 @@ struct Evacuation: View {
         span: MKCoordinateSpan(latitudeDelta: 4.0, longitudeDelta: 4.0)
     ))
     
-    @State private var selectedShelter: Shelter? = nil
-//    let fasano = CLLocationCoordinate2D(
-//        latitude: 28.3904554,
-//        longitude: -82.6245256
-//    )
-//    let stormShelter = CLLocationCoordinate2D(
-//        latitude: 28.472288131713867,
-//        longitude: -81.59027862548828
-//    )
-    
     
     var body: some View {
-        
-//        ForEach($shelters) { $shelter in
-//            Marker(shelter.name, coordinate: shelter.coordinate)
-//                .onTapGesture {
-//                    shelter.clicked.toggle()
-//                }
-//        }
         ZStack {
             Map(position: $cameraPosition) {
                 ForEach(shelters) { shelter in
@@ -74,22 +67,14 @@ struct Evacuation: View {
                                 .foregroundStyle(Color.red)
                         }
                         .onTapGesture {
-                            if selectedShelter?.id == shelter.id {
-                                selectedShelter = nil
-                            } else {
-                                selectedShelter = shelter
+                            if let url = URL(string: "https://maps.apple.com/?ll=\(shelter.coordinate.latitude),\(shelter.coordinate.longitude)&q=Shelter") {
+                                UIApplication.shared.open(url)
                             }
                         }
                     }
                 }
             }
         }
-
-//            Marker("Florida", coordinate: florida)
-//                .tint(.blue)
-//            Marker("Husdon Shelter", coordinate: fasano)
-//                .tint(.blue)
-//            Marker("Storm Shelter", coordinate: stormShelter)
         .safeAreaInset(edge: .bottom) {
             NavigationLink(destination: ContentView()) {
                 ZStack {
@@ -111,18 +96,3 @@ struct Evacuation: View {
 
 //Trying to make map icons clickable to see links to the address
 //similar to the todo list page, but idk where to put it- maybe make a VStack before??
-
-//List {
-//    ForEach($shelters) { $shelter in
-//        HStack {
-//            Text(systemName: shelter.isChecked ? "shelter.address": " ")
-//                .onTapGesture {
-//                    shelter.isChecked.toggle()
-//                }
-//            Text(shelter.name)
-//
-//        }
-//    }
-//}
-//.scrollContentBackground(.hidden)
-
