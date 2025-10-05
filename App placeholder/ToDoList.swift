@@ -52,7 +52,8 @@ struct ToDoList: View {
                                     item.isChecked.toggle()
                                 }
                             Text(item.title)
-
+//                                .font(.system(size: 15))
+                                .font(.custom( "IndieFlower-Regular", size:15))
                         }
                     }
                 }

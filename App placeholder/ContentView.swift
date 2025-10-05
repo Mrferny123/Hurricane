@@ -14,7 +14,8 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                 //spacing added to make the title centered
-                Text("      Welcome to Hurricane Helper!")
+                Text("  Welcome to Hurricane Helper!")
+                    .font(.custom("Avenir Next", size: 24.0))
                     .foregroundStyle(Color(red: 51.0/255.0, green: 65.0/255.0, blue: 85.0/255.0))
                     .font(Font.largeTitle.bold())
                 //buttons to other pages
