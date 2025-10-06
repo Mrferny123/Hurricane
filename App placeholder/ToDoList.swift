@@ -24,7 +24,7 @@ struct ToDoList: View {
         CheckListItems(title: "Try to close off windows and put sandbags around your house to help with flooding", isChecked: false),
         CheckListItems(title: "Try to have access of live news through phones or radios", isChecked: false),
         CheckListItems(title: "Store important documents in a large water sealed container", isChecked: false),
-        CheckListItems(title: "Get supplies like flashlights, first aid kits, medication, power banks, extra cash, and extra fuel", isChecked: false)
+        CheckListItems(title: "Get supplies like flashlights, first aid kits, medication, power banks, extra cash, tools, and extra fuel", isChecked: false)
     ]
     var body: some View {
         ZStack {
@@ -44,6 +44,7 @@ struct ToDoList: View {
                     .padding()
                         Spacer()
                 Spacer()
+//                Image("clipboard")
                 List {
                     ForEach($checkListItems) { $item in
                         HStack {
@@ -53,11 +54,18 @@ struct ToDoList: View {
                                 }
                             Text(item.title)
 //                                .font(.system(size: 15))
+                            //Check if this work next open!!
                                 .font(.custom( "IndieFlower-Regular", size:15))
                         }
                     }
                 }
                 .scrollContentBackground(.hidden)
+//                .background(
+//                    Image("clipboard")
+//                        .resizable()
+//                        .frame(width: 480, height: 800)
+//                        .scaledToFit()
+//                )
 
                 NavigationLink(destination: ContentView()) {
                     ZStack {

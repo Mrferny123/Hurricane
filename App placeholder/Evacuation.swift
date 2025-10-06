@@ -43,12 +43,36 @@ struct Evacuation: View {
             address: "1900 Omaha StPalm Harbor, FL 34683",
             coordinate: CLLocationCoordinate2D(latitude: 28.083701, longitude:-82.760102),
             info: "Shelter in Pinellas County; Pet friendly, Special needs friendly"
+        ),
+        Shelter(
+            name: "Coral Glades High School",
+            address: "2700 Sportsplex Dr, Coral Springs 33065",
+            coordinate: CLLocationCoordinate2D(latitude: 26.97617, longitude:-82.09064),
+            info: "Shelter in Broward County"
+        ),
+        Shelter(
+            name: "Liberty Elementary School",
+            address: "370 Atwater St., Port Charlotte",
+            coordinate: CLLocationCoordinate2D(latitude: 26.2633793, longitude:-80.2952765),
+            info: "Shelter in Charlotte County"
+        ),
+        Shelter(
+            name: "Deep Creek Community Center",
+            address: "11934 N US HWY 441, Lake City, FL 32055",
+            coordinate: CLLocationCoordinate2D(latitude: 30.3574888, longitude:-82.6181475),
+            info: "Shelter in Columbia County"
+        ),
+        Shelter(
+            name: "Global Learning Academy",
+            address: "100 North P Street Pensacola, Florida 32505",
+            coordinate: CLLocationCoordinate2D(latitude: 30.413802, longitude: -87.242689),
+            info: "Shelter in Escambia County"
         )
     ]
     
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion (
-        center:CLLocationCoordinate2D(latitude: 27.6648,longitude: -81.5158),
-        span: MKCoordinateSpan(latitudeDelta: 4.0, longitudeDelta: 4.0)
+        center:CLLocationCoordinate2D(latitude: 27.93866, longitude: -84.014924),
+        span: MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 10.0)
     ))
     
     
@@ -58,10 +82,6 @@ struct Evacuation: View {
                 ForEach(shelters) { shelter in
                     Annotation(shelter.name, coordinate: shelter.coordinate) {
                         ZStack {
-                            Circle()
-                                .fill(Color.blue.opacity(0.3))
-                                .frame(width: 30, height: 30)
-
                             Image(systemName: "mappin.circle.fill")
                                 .font(.title)
                                 .foregroundStyle(Color.red)
