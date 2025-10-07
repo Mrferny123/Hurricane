@@ -67,6 +67,24 @@ struct Evacuation: View {
             address: "100 North P Street Pensacola, Florida 32505",
             coordinate: CLLocationCoordinate2D(latitude: 30.413802, longitude: -87.242689),
             info: "Shelter in Escambia County"
+        ),
+        Shelter(
+            name: "Hilltop Elementary School",
+            address: "2401 US-17, Wauchula, FL 33873",
+            coordinate: CLLocationCoordinate2D(latitude: 27.5866793, longitude: -81.8203525),
+            info: "Shelter in Hardee County"
+        ),
+        Shelter(
+            name: "LaBelle Middle School",
+            address: "8000 E Cowboy Way, LaBelle, FL 33935",
+            coordinate: CLLocationCoordinate2D(latitude: 26.749635696411133, longitude: -81.36131286621094),
+            info: "Shelter in Hendry County"
+        ),
+        Shelter(
+            name: "Liberty High School",
+            address: "4250 Pleasant Hill Rd, Kissimmee, FL 34746",
+            coordinate: CLLocationCoordinate2D(latitude: 28.161511, longitude: -81.4432248),
+            info: "Shelter in Osceola County"
         )
     ]
     

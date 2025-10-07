@@ -5,6 +5,51 @@
 //  Created by Nissi Sanju on 9/5/25.
 //
 
+
+import SwiftUI
+import WebKit
+
+struct ChatbotView: UIViewRepresentable {
+    let urlString: String
+    
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        if let url = URL(string: urlString) {
+            let request = URLRequest(url: url)
+            uiView.load(request)
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //import SwiftUI
 //import WebKit
 //
@@ -35,38 +80,41 @@
 //}
 //
 
-import UIKit
-import WebKit
 
 
-class ChatbotViewController: UIViewController {
-    var webView: WKWebView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        let htmlString: String! = """
-//        <html>
-//          <head>
-//            <meta charset="UTF-8">
-//            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-//            <title>Landbot | Convert a Landing Page into a Chatbot</title>
-//          </head>
-//          <body>
-//            <script SameSite="None; Secure" type="module" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"></script>
-//            <script type="module">
-//              var myLandbot = new Landbot.Fullpage({
-//                configUrl: 'https://storage.googleapis.com/landbot.site/v3/H-3167921-7V95U68ZRQ56ZF5D/index.json',
-//              });
-//            </script>
-//          </body>
-//        </html>
-//        """
-        webView = WKWebView(frame: self.view.bounds)
-        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        view.addSubview(webView)
-        
-        if let url = URL(string: "https://landbot.site/v3/H-3167921-7V95U68ZRQ56ZF5D/index.html") {
-            let request = URLRequest(url: url)
-            webView.load(request)
-        }
-    }
-}
+
+//import UIKit
+//import WebKit
+//
+//
+//class ChatbotViewController: UIViewController {
+//    var webView: WKWebView!
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+////        let htmlString: String! = """
+////        <html>
+////          <head>
+////            <meta charset="UTF-8">
+////            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+////            <title>Landbot | Convert a Landing Page into a Chatbot</title>
+////          </head>
+////          <body>
+////            <script SameSite="None; Secure" type="module" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs"></script>
+////            <script type="module">
+////              var myLandbot = new Landbot.Fullpage({
+////                configUrl: 'https://storage.googleapis.com/landbot.site/v3/H-3167921-7V95U68ZRQ56ZF5D/index.json',
+////              });
+////            </script>
+////          </body>
+////        </html>
+////        """
+//        webView = WKWebView(frame: self.view.bounds)
+//        webView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        view.addSubview(webView)
+//        
+//        if let url = URL(string: "https://landbot.site/v3/H-3167921-7V95U68ZRQ56ZF5D/index.html") {
+//            let request = URLRequest(url: url)
+//            webView.load(request)
+//        }
+//    }
+//}
