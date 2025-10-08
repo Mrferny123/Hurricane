@@ -85,9 +85,53 @@ struct Evacuation: View {
             address: "4250 Pleasant Hill Rd, Kissimmee, FL 34746",
             coordinate: CLLocationCoordinate2D(latitude: 28.161511, longitude: -81.4432248),
             info: "Shelter in Osceola County"
+        ),
+        Shelter(
+            name: "Dunbar High School",
+            address: "3800 Edison Avenue Fort Myers, FL 33916",
+            coordinate: CLLocationCoordinate2D(latitude: 26.6339, longitude: -81.842857),
+            info: "Shelter in Lee County"
+        ),
+        Shelter(
+            name: "Anderson Middle School",
+            address: "7000 SE Atlantic Ridge Dr, Stuart, FL, 34997",
+            coordinate: CLLocationCoordinate2D(latitude: 27.121293, longitude: -80.238894),
+            info: "Shelter in Martin County"
+        ),
+        Shelter(
+            name: "Key West High School",
+            address: "2100 Flagler St. Key West, FL",
+            coordinate: CLLocationCoordinate2D(latitude: 24.5528123, longitude: -81.7834859),
+            info: "Shelter in Monroe County; only for cat 1 or 2, otherwise evacuate"
+        ),
+        Shelter(
+            name: "Davidson Middle School",
+            address: "6261 Old Bethel Rd Crestview, FL 32536",
+            coordinate: CLLocationCoordinate2D(latitude: 30.7931336, longitude: -86.5619452),
+            info: "Shelter in Okaloosa County"
+        ),
+        Shelter(
+            name: "Belleair Elementary",
+            address: "1156 Lakeview Rd, Clearwater",
+            coordinate: CLLocationCoordinate2D(latitude: 27.9508329, longitude: -82.7888265),
+            info: "Shelter in Pinellas County"
+        ),
+        Shelter(
+            name: "Walter Caldwell Elementary School",
+            address: "141 Dairy Rd, Auburndale, FL 33823",
+            coordinate: CLLocationCoordinate2D(latitude: 28.072271, longitude: -81.776228),
+            info: "Shelter in Polk County"
+        ),
+        Shelter(
+            name: "Chipley High School",
+            address: "1545, Brickyard Rd. Chipley, FL 32428",
+            coordinate: CLLocationCoordinate2D(latitude: 30.764759, longitude: -85.55825),
+            info: "Shelter in Washington County"
         )
     ]
     
+    
+    //make sure to double check these locations as sometimes, shelters may change
     @State private var cameraPosition: MapCameraPosition = .region(MKCoordinateRegion (
         center:CLLocationCoordinate2D(latitude: 27.93866, longitude: -84.014924),
         span: MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 10.0)
@@ -112,16 +156,11 @@ struct Evacuation: View {
                     }
                 }
             }
-        }
-        .safeAreaInset(edge: .bottom) {
-            NavigationLink(destination: ContentView()) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .fill(Color(red: 244.0/255.0, green: 239.0/255.0, blue: 235.0/255.0))
-                        .frame(width: 100.0, height: 30.0)
-                    Text("Go Back")
-                        .foregroundStyle(Color(red: 95.0/255.0, green: 123.0/255.0, blue: 140.0/255.0))
-                }
+            VStack{
+                Spacer()
+                Text("Please make sure to double check these locations  as sometimes, shelters may change")
+                    .foregroundStyle(Color(.black))
+                    .background(Color.white)
             }
         }
     }
@@ -129,8 +168,3 @@ struct Evacuation: View {
 #Preview {
     Evacuation()
 }
-
-
-
-//Trying to make map icons clickable to see links to the address
-//similar to the todo list page, but idk where to put it- maybe make a VStack before??

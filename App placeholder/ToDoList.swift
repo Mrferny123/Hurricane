@@ -66,16 +66,6 @@ struct ToDoList: View {
 //                        .frame(width: 480, height: 800)
 //                        .scaledToFit()
 //                )
-
-                NavigationLink(destination: ContentView()) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10.0)
-                            .fill(Color(red: 203.0/255.0, green: 217.0/255.0, blue: 228.0/255.0))
-                            .frame(width: 100.0, height: 30.0)
-                        Text("Go Back")
-                            .foregroundStyle(Color(red: 95.0/255.0, green: 123.0/255.0, blue: 140.0/255.0))
-                    }
-                }
                 
             }
             .padding()
