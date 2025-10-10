@@ -15,10 +15,14 @@ struct ContentView: View {
                     .ignoresSafeArea()
                 VStack {
                     //spacing added to make the title centered
-                    Text("  Welcome to Hurricane Helper!")
-                        .font(.custom("Avenir Next", size: 24.0))
+                    Text("     Welcome to Hurricane Helper!")
+//                        .font(.custom("Avenir Next", size: 32.0))
                         .foregroundStyle(Color(red: 51.0/255.0, green: 65.0/255.0, blue: 85.0/255.0))
                         .font(Font.largeTitle.bold())
+                    Image("Hurricane Helper")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 280.0, height: 280.0)
                     //buttons to other pages
                     //changes in Chatbot, made the navigation link not work
                     NavigationLink(destination: ChatbotView(urlString: "https://landbot.site/v3/H-3167921-7V95U68ZRQ56ZF5D/index.html")) {
@@ -67,13 +71,6 @@ struct ContentView: View {
                     
                     //maybe instead of button it becomes a thing at the bottom? -> will have to make it less plain then bc buttons will be lower
                     
-                    
-                    //                .toolbarBackground(.blue, for: .navigationBar)
-                    //                .toolbarBackground(.visible, for: .navigationBar)
-                    //                .foregroundColor(.white)
-                    //                .buttonStyle(.borderedProminent)
-                    //                .tint(Color(red: 149.0/255.0, green: 114.0/255.0, blue: 76.0/255.0))
-                    //
                 }
                 .padding()
             }

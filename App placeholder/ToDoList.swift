@@ -53,19 +53,11 @@ struct ToDoList: View {
                                     item.isChecked.toggle()
                                 }
                             Text(item.title)
-//                                .font(.system(size: 15))
-                            //Check if this work next open!!
-                                .font(.custom( "IndieFlower-Regular", size:15))
                         }
                     }
                 }
                 .scrollContentBackground(.hidden)
-//                .background(
-//                    Image("clipboard")
-//                        .resizable()
-//                        .frame(width: 480, height: 800)
-//                        .scaledToFit()
-//                )
+
                 
             }
             .padding()

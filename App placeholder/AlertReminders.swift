@@ -20,13 +20,12 @@ struct AlertReminders: View {
                         .ignoresSafeArea()
                         .position(x: 201, y:70)
             VStack {
-                Text("Here are the most recent alerts for your area: ")
+                Text("Here are the most recent alerts for Florida: ")
                     .bold()
                     .font(.system(size: 20.0))
                     .foregroundStyle(Color(red: 95.0/255.0, green: 123.0/255.0, blue: 140.0/255.0))
                     .padding()
             
-                //maybe make map page if time
                 //Maybe make app more personalized based on user location?
                 Spacer()
                 

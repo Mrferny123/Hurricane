@@ -160,7 +160,7 @@ struct Evacuation: View {
                 Spacer()
                 Text("Please make sure to double check these locations  as sometimes, shelters may change")
                     .foregroundStyle(Color(.black))
-                    .background(Color.white)
+                    .background(Color(red: 240.0/255.0, green: 235.0/255.0, blue: 223.0/255.0))
             }
         }
     }
