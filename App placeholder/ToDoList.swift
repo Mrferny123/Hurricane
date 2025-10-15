@@ -26,15 +26,15 @@ struct ToDoList: View {
         CheckListItems(title: "Store important documents in a large water sealed container", isChecked: false),
         CheckListItems(title: "Get supplies like flashlights, first aid kits, medication, power banks, extra cash, tools, and extra fuel", isChecked: false)
     ]
-    var body: some View {
-        ZStack {
-            Color(red: 240.0/255.0, green: 235.0/255.0, blue: 223.0/255.0)
-                .ignoresSafeArea()
+        var body: some View {
+            ZStack {
+                Color(red: 240.0/255.0, green: 235.0/255.0, blue: 223.0/255.0)
+                    .ignoresSafeArea()
             RoundedRectangle(cornerRadius: 10.0)
                 .fill(Color(red: 203.0/255.0, green: 217.0/255.0, blue: 228.0/255.0))
-                .frame(width: 405.0, height: 190.0)
+                .frame(width: 405.0, height: 230.0)
                 .ignoresSafeArea()
-                .position(x: 201, y:70)
+                .position(x: 201, y:95)
             VStack {
                 //Maybe include mental health page to calm down during hurricane
                 Text("Here are some things you should do to prepare for a hurricane: ")
@@ -42,8 +42,8 @@ struct ToDoList: View {
                     .font(.system(size: 20.0))
                     .foregroundStyle(Color(red: 95.0/255.0, green: 123.0/255.0, blue: 140.0/255.0))
                     .padding()
-                        Spacer()
                 Spacer()
+                    .frame(height: 30.0)
 //                Image("clipboard")
                 List {
                     ForEach($checkListItems) { $item in

@@ -16,9 +16,11 @@ struct AlertReminders: View {
                 .ignoresSafeArea()
             RoundedRectangle(cornerRadius: 10.0)
                 .fill(Color(red: 203.0/255.0, green: 217.0/255.0, blue: 228.0/255.0))
-                        .frame(width: 405.0, height: 190.0)
+                        .frame(width: 405.0, height: 230.0)
                         .ignoresSafeArea()
-                        .position(x: 201, y:70)
+                        .position(x: 201, y:95)
+            Spacer()
+                .frame(height: 30.0)
             VStack {
                 Text("Here are the most recent alerts for Florida: ")
                     .bold()
