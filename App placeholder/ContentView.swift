@@ -43,6 +43,16 @@ struct ContentView: View {
                     //changes in Chatbot, made the navigation link not work
                     Spacer()
                         .frame(height: 35)
+                    NavigationLink(destination: ToDoList()) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10.0)
+                                .fill(Color(red: 133.0/255.0, green: 161.0/255.0, blue: 170.0/255.0))
+                                .frame(width: 270.0, height: 50.0)
+                            Text(Image(systemName: "list.bullet.circle")) + Text(" Tips Before The Hurricane")
+                                .foregroundStyle(Color.white)
+                                .font(.system(size: 20.0))
+                        }
+                    }
                     NavigationLink(destination: ChatbotView(urlString: "https://landbot.site/v3/H-3167921-7V95U68ZRQ56ZF5D/index.html")) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10.0)
@@ -62,16 +72,6 @@ struct ContentView: View {
                                 .foregroundStyle(Color.white)
                                 .font(.system(size: 20.0))
                             
-                        }
-                    }
-                    NavigationLink(destination: ToDoList()) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10.0)
-                                .fill(Color(red: 133.0/255.0, green: 161.0/255.0, blue: 170.0/255.0))
-                                .frame(width: 270.0, height: 50.0)
-                            Text(Image(systemName: "list.bullet.circle")) + Text(" Tips Before The Hurricane")
-                                .foregroundStyle(Color.white)
-                                .font(.system(size: 20.0))
                         }
                     }
                     NavigationLink(destination: Evacuation()) {

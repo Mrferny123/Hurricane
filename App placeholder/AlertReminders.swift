@@ -25,7 +25,7 @@ struct AlertReminders: View {
                 Text("Here are the most recent alerts for Florida: ")
                     .bold()
                     .font(.system(size: 20.0))
-                    .foregroundStyle(Color(red: 95.0/255.0, green: 123.0/255.0, blue: 140.0/255.0))
+                    .foregroundStyle(Color(red: 51.0/255.0, green: 65.0/255.0, blue: 85.0/255.0))
                     .padding()
             
                 //Maybe make app more personalized based on user location?

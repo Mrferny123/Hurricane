@@ -24,7 +24,8 @@ struct Evacuation: View {
     
     //do more reseach on the different shelters, however, many only come when a hurricane is actually present, so maybe just put last years?
     //add maybe a card that user can click on to get more details
-    
+    //right now only need name and coordinates but maybe can add like a card design later
+    //maybe make another file to put all shelters
     @State private var shelters: [Shelter] = [
         Shelter(
             name: "Fasano Regional Hurricane Shelter",
