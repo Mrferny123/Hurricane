@@ -1,4 +1,4 @@
-Hurricane Helper
+# Hurricane Helper
 
 I made this app to help others, especially Floridan residents, with hurricane tips and resources.
 This project was made using Swift, Landbot.io, and National Weather's API.
@@ -9,25 +9,26 @@ and documentation tabs later, I eventually figured it out.
 
 This mobile app consists of 4 pages:
 
-🧾 To-Do Checklist
+## 🧾 To-Do Checklist
 
 -Simple checklist of tips to prepare before a hurricane
 
 -Tasks can be checked on or off and are saved even after exiting the app
 
-🤖 AI Chatbot
+## 🤖 AI Chatbot
 
 -Built using Landbot.io, integrated with WebKit
 
-🌤️ Real-Time Alerts
+## 🌤️ Real-Time Alerts
 
 -Pulls live weather alerts for Florida from the National Weather Service API
 
-🏠 Shelter Finder
+## 🏠 Shelter Finder
 
 -Displays nearby Florida shelters on an interactive map
 
 -Tapping a shelter opens it in Apple Maps for directions
+
 
 
 [![Athena Award Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Faward.athena.hackclub.com%2Fapi%2Fbadge)](https://award.athena.hackclub.com?utm_source=readme)
