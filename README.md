@@ -10,17 +10,23 @@ and documentation tabs later, I eventually figured it out.
 This mobile app consists of 4 pages:
 
 🧾 To-Do Checklist
+
 -Simple checklist of tips to prepare before a hurricane
--Tasks can be checked off and are saved even after exiting the app
+
+-Tasks can be checked on or off and are saved even after exiting the app
 
 🤖 AI Chatbot
+
 -Built using Landbot.io, integrated with WebKit
 
 🌤️ Real-Time Alerts
+
 -Pulls live weather alerts for Florida from the National Weather Service API
 
 🏠 Shelter Finder
+
 -Displays nearby Florida shelters on an interactive map
+
 -Tapping a shelter opens it in Apple Maps for directions
 
 
