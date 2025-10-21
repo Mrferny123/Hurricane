@@ -53,7 +53,7 @@ struct ContentView: View {
                                 .font(.system(size: 20.0))
                         }
                     }
-                    NavigationLink(destination: ChatbotView(urlString: "https://landbot.site/v3/H-3167921-7V95U68ZRQ56ZF5D/index.html")) {
+                    NavigationLink(destination: ChatbotView(urlString: "https://landbot.site/v3/H-3189343-6JE0FZHSTOTDRQM4/index.html")) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10.0)
                                 .fill(Color(red: 133.0/255, green: 161.0/255.0, blue: 170.0/255.0))
