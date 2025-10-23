@@ -151,7 +151,11 @@ struct Evacuation: View {
                         }
                         .onTapGesture {
                             if let url = URL(string: "https://maps.apple.com/?ll=\(shelter.coordinate.latitude),\(shelter.coordinate.longitude)&q=Shelter") {
-                                UIApplication.shared.open(url)
+                                #if os(iOS)
+                                 UIApplication.shared.open(url)
+                                #elseif os(macOS)
+                                 NSWorkspace.shared.open(url)
+                                #endif
                             }
                         }
                     }

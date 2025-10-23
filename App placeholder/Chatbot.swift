@@ -9,7 +9,8 @@
 import SwiftUI
 import WebKit
 
-struct ChatbotView: UIViewRepresentable {
+#if os(iOS)
+ struct ChatbotView: UIViewRepresentable {
     let urlString: String
     
     func makeUIView(context: Context) -> WKWebView {
@@ -23,3 +24,25 @@ struct ChatbotView: UIViewRepresentable {
         }
     }
 }
+#elseif os(macOS)
+ struct ChatbotView: NSViewRepresentable {
+    let urlString: String
+    
+    func makeNSView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+    
+    func updateNSView(_ nsView: WKWebView, context: Context) {
+        if let url = URL(string: urlString) {
+            let request = URLRequest(url: url)
+            nsView.load(request)
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+    
+    class Coordinator {}
+}
+#endif
