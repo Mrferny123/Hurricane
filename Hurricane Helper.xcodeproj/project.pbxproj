@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AE75C652E6BA9740091EC5C /* App placeholder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App placeholder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AE75C722E6BA9770091EC5C /* App placeholderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App placeholderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AE75C7C2E6BA9770091EC5C /* App placeholderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "App placeholderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AE75C652E6BA9740091EC5C /* Hurricane Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hurricane Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AE75C722E6BA9770091EC5C /* Hurricane HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hurricane HelperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AE75C7C2E6BA9770091EC5C /* Hurricane HelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hurricane HelperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,9 +85,9 @@
 		0AE75C662E6BA9740091EC5C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0AE75C652E6BA9740091EC5C /* App placeholder.app */,
-				0AE75C722E6BA9770091EC5C /* App placeholderTests.xctest */,
-				0AE75C7C2E6BA9770091EC5C /* App placeholderUITests.xctest */,
+				0AE75C652E6BA9740091EC5C /* Hurricane Helper.app */,
+				0AE75C722E6BA9770091EC5C /* Hurricane HelperTests.xctest */,
+				0AE75C7C2E6BA9770091EC5C /* Hurricane HelperUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0AE75C642E6BA9740091EC5C /* App placeholder */ = {
+		0AE75C642E6BA9740091EC5C /* Hurricane Helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AE75C862E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "App placeholder" */;
+			buildConfigurationList = 0AE75C862E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "Hurricane Helper" */;
 			buildPhases = (
 				0AE75C612E6BA9740091EC5C /* Sources */,
 				0AE75C622E6BA9740091EC5C /* Frameworks */,
@@ -110,16 +110,16 @@
 			fileSystemSynchronizedGroups = (
 				0AE75C672E6BA9740091EC5C /* App placeholder */,
 			);
-			name = "App placeholder";
+			name = "Hurricane Helper";
 			packageProductDependencies = (
 			);
 			productName = "App placeholder";
-			productReference = 0AE75C652E6BA9740091EC5C /* App placeholder.app */;
+			productReference = 0AE75C652E6BA9740091EC5C /* Hurricane Helper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0AE75C712E6BA9770091EC5C /* App placeholderTests */ = {
+		0AE75C712E6BA9770091EC5C /* Hurricane HelperTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AE75C892E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "App placeholderTests" */;
+			buildConfigurationList = 0AE75C892E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "Hurricane HelperTests" */;
 			buildPhases = (
 				0AE75C6E2E6BA9770091EC5C /* Sources */,
 				0AE75C6F2E6BA9770091EC5C /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				0AE75C752E6BA9770091EC5C /* App placeholderTests */,
 			);
-			name = "App placeholderTests";
+			name = "Hurricane HelperTests";
 			packageProductDependencies = (
 			);
 			productName = "App placeholderTests";
-			productReference = 0AE75C722E6BA9770091EC5C /* App placeholderTests.xctest */;
+			productReference = 0AE75C722E6BA9770091EC5C /* Hurricane HelperTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0AE75C7B2E6BA9770091EC5C /* App placeholderUITests */ = {
+		0AE75C7B2E6BA9770091EC5C /* Hurricane HelperUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0AE75C8C2E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "App placeholderUITests" */;
+			buildConfigurationList = 0AE75C8C2E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "Hurricane HelperUITests" */;
 			buildPhases = (
 				0AE75C782E6BA9770091EC5C /* Sources */,
 				0AE75C792E6BA9770091EC5C /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				0AE75C7F2E6BA9770091EC5C /* App placeholderUITests */,
 			);
-			name = "App placeholderUITests";
+			name = "Hurricane HelperUITests";
 			packageProductDependencies = (
 			);
 			productName = "App placeholderUITests";
-			productReference = 0AE75C7C2E6BA9770091EC5C /* App placeholderUITests.xctest */;
+			productReference = 0AE75C7C2E6BA9770091EC5C /* Hurricane HelperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0AE75C602E6BA9740091EC5C /* Build configuration list for PBXProject "App placeholder" */;
+			buildConfigurationList = 0AE75C602E6BA9740091EC5C /* Build configuration list for PBXProject "Hurricane Helper" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0AE75C642E6BA9740091EC5C /* App placeholder */,
-				0AE75C712E6BA9770091EC5C /* App placeholderTests */,
-				0AE75C7B2E6BA9770091EC5C /* App placeholderUITests */,
+				0AE75C642E6BA9740091EC5C /* Hurricane Helper */,
+				0AE75C712E6BA9770091EC5C /* Hurricane HelperTests */,
+				0AE75C7B2E6BA9770091EC5C /* Hurricane HelperUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		0AE75C742E6BA9770091EC5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AE75C642E6BA9740091EC5C /* App placeholder */;
+			target = 0AE75C642E6BA9740091EC5C /* Hurricane Helper */;
 			targetProxy = 0AE75C732E6BA9770091EC5C /* PBXContainerItemProxy */;
 		};
 		0AE75C7E2E6BA9770091EC5C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0AE75C642E6BA9740091EC5C /* App placeholder */;
+			target = 0AE75C642E6BA9740091EC5C /* Hurricane Helper */;
 			targetProxy = 0AE75C7D2E6BA9770091EC5C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -460,7 +460,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App placeholder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App placeholder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hurricane Helper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hurricane Helper";
 			};
 			name = Debug;
 		};
@@ -478,7 +478,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App placeholder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/App placeholder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hurricane Helper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hurricane Helper";
 			};
 			name = Release;
 		};
@@ -517,7 +517,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AE75C602E6BA9740091EC5C /* Build configuration list for PBXProject "App placeholder" */ = {
+		0AE75C602E6BA9740091EC5C /* Build configuration list for PBXProject "Hurricane Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AE75C842E6BA9770091EC5C /* Debug */,
@@ -526,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AE75C862E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "App placeholder" */ = {
+		0AE75C862E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "Hurricane Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AE75C872E6BA9770091EC5C /* Debug */,
@@ -535,7 +535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AE75C892E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "App placeholderTests" */ = {
+		0AE75C892E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "Hurricane HelperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AE75C8A2E6BA9770091EC5C /* Debug */,
@@ -544,7 +544,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0AE75C8C2E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "App placeholderUITests" */ = {
+		0AE75C8C2E6BA9770091EC5C /* Build configuration list for PBXNativeTarget "Hurricane HelperUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AE75C8D2E6BA9770091EC5C /* Debug */,

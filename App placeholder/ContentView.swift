@@ -37,7 +37,7 @@ struct ContentView: View {
 //                        .resizable()
 //                        .scaledToFit()
 //                        .frame(width: 280.0, height: 280.0)
-                    Text("Your guide for hurricane prepardness")
+                    Text("Your guide for hurricane preparedness")
                         .foregroundStyle(.white)
                     //buttons to other pages
                     //changes in Chatbot, made the navigation link not work
